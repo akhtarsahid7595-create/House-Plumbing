@@ -1,0 +1,7 @@
+.gemini/
+.idea/
+.vscode/
+node_modules/
+*.log
+.DS_Store
+C:/Users/sahid/.gemini/antigravity/
