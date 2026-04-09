@@ -754,11 +754,17 @@ footer {
 
 @media (max-width: 400px) {
     .sticky-btn {
-        padding: 1rem 0.5rem;
-        font-size: 0.95rem;
-        gap: 0.4rem;
+        padding: 1rem 0.25rem;
+        font-size: 0.85rem;
+        gap: 0.3rem;
+        letter-spacing: -0.5px;
+    }
+    .sticky-btn svg {
+        width: 18px;
+        height: 18px;
     }
 }
+
 
 
 
