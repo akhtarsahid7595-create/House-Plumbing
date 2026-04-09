@@ -1,14 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide Icons
-    lucide.createIcons();
+    // Initialize Lucide Icons with safety check
+    const initIcons = () => {
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons({
+                attrs: {
+                    'class': 'lucide',
+                    'stroke-width': 2
+                }
+            });
+        }
+    };
+    initIcons();
 
     // Initialize AOS (Animate on Scroll)
-    AOS.init({
-        duration: 800,
-        easing: 'ease-out-cubic',
-        once: true,
-        offset: 50
-    });
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+    }
 
     // Navbar Scroll Effect
     const header = document.getElementById('main-nav');
@@ -130,13 +142,15 @@ document.addEventListener('DOMContentLoaded', () => {
     body.appendChild(lightbox);
     
     // Refresh lucide for the close icon
-    lucide.createIcons({
-        attrs: {
-            'class': 'lucide',
-            'stroke-width': 2
-        },
-        nameAttr: 'data-lucide'
-    });
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons({
+            attrs: {
+                'class': 'lucide',
+                'stroke-width': 2
+            },
+            nameAttr: 'data-lucide'
+        });
+    }
 
     const lightboxImg = lightbox.querySelector('img');
     const lightboxCaption = lightbox.querySelector('.lightbox-caption');
