@@ -811,8 +811,6 @@ footer {
     }
     
     .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    
-    .sticky-cta { display: flex; }
 }
 
 @media (max-width: 480px) {
