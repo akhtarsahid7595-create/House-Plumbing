@@ -4,12 +4,12 @@
 */
 
 :root {
-    --primary: #0F172A; /* Deep Navy Blue */
-    --accent: #F59E0B;  /* Subtle Orange */
-    --accent-glow: rgba(245, 158, 11, 0.3);
-    --secondary: #334155;
+    --primary: #000080; /* Deep Navy Blue */
+    --accent: #F15A24;  /* Brand Orange */
+    --accent-glow: rgba(241, 90, 36, 0.3);
+    --secondary: #414042; /* Brand Gray */
     --text-main: #1E293B;
-    --text-muted: #64748B;
+    --text-muted: #414042;
     --white: #FFFFFF;
     --bg-light: #F8FAFC;
     --glass: rgba(255, 255, 255, 0.8);
@@ -83,13 +83,14 @@ header .container {
     align-items: center;
 }
 
-.logo-text {
-    font-size: 1.5rem;
-    color: var(--primary);
+.logo img {
+    height: 60px;
+    width: auto;
+    display: block;
 }
 
-header.scrolled .logo-text {
-    color: var(--primary);
+header.scrolled .logo img {
+    height: 45px;
 }
 
 .accent {
@@ -318,6 +319,10 @@ header.scrolled .logo-text {
 .btn-whatsapp:hover {
     transform: translateY(-5px) scale(1.02);
     box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+.video-info .rating i svg {
+    fill: var(--accent);
 }
 
 .btn-whatsapp-alt {
